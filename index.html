@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Card</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/380342f404.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dessinez !</h1>
+    </header>
+    <main>
+        <canvas id="ecard" width="600" height="450"></canvas>
+
+        <div class="draw">
+            Outils
+            <ul class="tools">
+                <li><input type="color" class="colorPicker" name="colorPicker" value="#000000"></li>
+                <li><button class="tool eraser"><i class="fa-solid fa-eraser"></i></button></li>
+                <li><button class="tool reset">Reset</button></li>
+            </ul>
+            Couleur
+            <ul class="colors">
+                <li><div data-color="black" class="black color colorSelected"></div></li>
+                <li><div data-color="brown" class="brown color"></div></li>
+                <li><div data-color="red" class="red color"></div></li>
+                <li><div data-color="yellow" class="yellow color"></div></li>
+                <li><div data-color="green" class="green color"></div></li>
+                <li><div data-color="purple" class="purple color"></div></li>
+                <li><div data-color="blue" class="blue color"></div></li>
+                <li><div class="selected"></div></li>            
+            </ul>
+            Epaisseur
+            <ul class="thickness">
+                <li><button data-size="1" class="thick thin thicknessSelected">Fin</button></li>
+                <li><button data-size="5" class="thick normal">Normal</button></li>
+                <li><button data-size="10" class="thick big">Epais</button></li>
+            </ul>
+        </div>
+
+        <button class="send">Envoyer une e-carte</button>
+    </main>
+
+    <form method="post" action="php/index.php" class="sendForm hidden">
+        <input type="hidden" id="image" name="image"/>
+        <div class="form">
+            <label for="fromMail" class="fromMail">Votre email</label>
+            <input type="email" id="fromMail" name="fromMail" size="50"/>
+        </div>
+
+        <div class="form">
+            <label for="toMail" class="toMail">Email du destinataire</label>
+            <input type="email" id="toMail" name="toMail" size="50"/>
+        </div>
+
+        <div class="form">
+            <label for="mess" class="mess">Votre message</label>
+        </div>
+
+        <div class="form">
+            <textarea name="message" id="mess"></textarea>
+        </div>
+
+        <div>
+            <input type="checkbox" name="copy" id="copy" class="copy"/>
+            <label for="copy">Recevoir une copie du message</label>
+        </div>
+
+        <div class="form">
+            <input type="submit" value="Envoyer" class="submit">
+        </div>
+    </form>
+
+    <div class="messOK" ></div>
+    <div class="messKO" ></div>
+
+</body>
+</html>

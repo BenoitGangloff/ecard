@@ -1,0 +1,111 @@
+body {
+    background-color: darkgray;
+}
+
+h1 {
+    color:midnightblue;
+}
+
+#ecard {
+    border: 1px solid black;
+    background-color: white;
+}
+
+.tools, .colors, .thickness {
+    list-style-type: none;
+    display: flex;
+    margin: 5px;
+}
+
+.colors {
+    color: white;
+    align-items: center;
+}
+
+.tool {
+    margin: 5px;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.thick {
+    margin: 5px;
+}
+
+.black {
+    background-color: black;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.selected {
+    width: 25px;
+    height: 25px;
+    border-style: solid;
+    margin-left: 50px;
+}
+
+.send  {
+    margin-top: 50px;
+}
+
+.hideLine {
+    color: white;
+}
+
+.colorSelected {
+    border-style: solid;
+}
+
+.thicknessSelected {
+    color:white;
+    background-color: black;
+}
+
+.form {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+#mess {
+    width: 100%;
+    height: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.show {
+    display: block;
+}
